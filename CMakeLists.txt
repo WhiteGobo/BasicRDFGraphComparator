@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(BasicRDFGraphComparator VERSION 0.1.0 LANGUAGES RUST)
+project(BasicRDFGraphComparator VERSION 0.1.0 LANGUAGES C)
 
 add_subdirectory(src)
 
