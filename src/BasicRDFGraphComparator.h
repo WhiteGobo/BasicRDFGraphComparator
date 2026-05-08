@@ -36,15 +36,15 @@ void free_TripleStream(TripleStream *stream);
  * Memory leak for object_suffix = NULL
  * and object_type = HELPER_LIB_GRAPH_LANG_LITERAL
  */
-void append_TripleStream(TripleStream *stream,
-                         const char *subject_value,
+void append_TripleStream(const char *subject_value,
                          uint8_t subject_type,
                          const char *predicate_value,
                          const char *object_value,
                          const char *object_suffix,
                          uint8_t object_type,
                          const char *graph,
-                         uint8_t graph_type);
+                         uint8_t graph_type,
+			 TripleStream *stream);
 
 /**
  * Check Isomorphims of the given rdf graphs.

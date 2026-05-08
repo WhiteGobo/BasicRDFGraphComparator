@@ -212,12 +212,12 @@ pub extern "C" fn free_TripleStream(stream: *mut TripleStream){
 
 #[unsafe(no_mangle)]
 pub extern "C" fn append_TripleStream(
-    stream: *mut TripleStream,
     subject_value: *const c_char, subject_type: u8,
     predicate_value: *const c_char,
     object_value: *const c_char, object_suffix: *const c_char,
     object_type: u8,
-    graph: *const c_char, graph_type: u8)
+    graph: *const c_char, graph_type: u8,
+    stream: *mut TripleStream)
 {
     let subj_w: &str = match unsafe {CStr::from_ptr(subject_value)}.to_str(){
         Ok(x) => x,
